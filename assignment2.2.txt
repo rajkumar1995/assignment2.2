@@ -1,0 +1,22 @@
+Explain in detail:
+                     1. HDFS
+                     2. Hadoop cluster
+                     3. HDFS Blocks
+
+
+       HDFS:
+            Hadoop File System was developed using distributed file system design. It is run on commodity hardware. Unlike other distributed systems, HDFS is highly faulttolerant and designed using low-cost hardware.
+
+HDFS holds very large amount of data and provides easier access. To store such huge data, the files are stored across multiple machines. These files are stored in redundant fashion to rescue the system from possible data losses in case of failure. HDFS also makes applications available to parallel processing.
+
+       Hadoop cluster:
+                      Hadoop is an open source framework, that supports the processing of large data sets in a distributed computing environment. 
+Hadoop consists of MapReduce, the Hadoop distributed file system (HDFS) and a number of related projects such as Apache Hive, HBase and Zookeeper. MapReduce and Hadoop distributed file system (HDFS) are the main component of Hadoop. 
+Normally any set of loosely connected or tightly connected computers that work together as a single system is called Cluster. In simple words, a computer cluster used for Hadoop is called Hadoop Cluster. 
+
+
+       HDFS Blocks: 
+
+                   When you store a file in HDFS, the system breaks it down into a set of individual blocks and stores these blocks in various slave nodes in the Hadoop cluster. This is an entirely normal thing to do, as all file systems break files down into blocks before storing them to disk.
+HDFS only wants to make sure that files are split into evenly sized blocks that match the predefined block size for the Hadoop instance (unless a custom value was entered for the file being stored). In the preceding figure, that block size is 128MB.
+The concept of storing a file as a collection of blocks is entirely consistent with how file systems normally work. But what’s different about HDFS is the scale. A typical block size that you’d see in a file system under Linux is 4KB, whereas a typical block size in Hadoop is 128MB. This value is configurable, and it can be customized, as both a new system default and a custom value for individual files.
